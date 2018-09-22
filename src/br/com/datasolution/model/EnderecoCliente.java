@@ -1,8 +1,11 @@
+package br.com.datasolution.model;
 
 
 
 
 
+
+import br.com.datasolution.model.Cliente;
 import java.util.List;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;

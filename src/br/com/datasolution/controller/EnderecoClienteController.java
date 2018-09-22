@@ -1,7 +1,10 @@
+package br.com.datasolution.controller;
 
 
 
 
+
+import br.com.datasolution.model.EnderecoCliente;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;

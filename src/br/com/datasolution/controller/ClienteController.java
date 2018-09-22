@@ -1,7 +1,10 @@
+package br.com.datasolution.controller;
 
 
 
 
+
+import br.com.datasolution.model.Cliente;
 import java.util.List;
 import javax.persistence.Query;
 import javax.persistence.EntityManager;

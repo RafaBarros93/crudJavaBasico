@@ -1,3 +1,9 @@
+package br.com.datasolution.view;
+
+import br.com.datasolution.controller.EnderecoClienteController;
+import br.com.datasolution.controller.ClienteController;
+import br.com.datasolution.model.EnderecoCliente;
+import br.com.datasolution.model.Cliente;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -5,9 +11,10 @@ import java.util.List;
 public class View {
 
     public static void main(String[] args) {
+     
         Cliente cli = new Cliente();
-        cli.setNome("Alexandre");
-        cli.setIdade(30);
+        cli.setNome("Cassaro");
+        cli.setIdade(21);
         cli.setRg_cliente("MG-25.145.120");
         cli.setMatricula(14659887);
 
@@ -15,8 +22,8 @@ public class View {
         clientes.add(cli);
 
         EnderecoCliente endereco = new EnderecoCliente();
-        endereco.setCiadade("Neves");
-        endereco.setBairro("Logoa");
+        endereco.setCiadade("Contagem");
+        endereco.setBairro("Europa");
         endereco.setCep("666-35446");
         endereco.setNumero(802);
         endereco.setRua("Rua 11");
@@ -25,10 +32,11 @@ public class View {
 
         cli.setEndereco(endereco);
 
-      //  ClienteController cliController = new ClienteController();
-      //  cliController.saveCliente(cli);
+       EnderecoClienteController enController = new EnderecoClienteController();
+       enController.saveEnderecoCliente(endereco);
+        
+      
 
-        EnderecoClienteController enController = new EnderecoClienteController();
-        enController.saveEnderecoCliente(endereco);
+       
     }
 }

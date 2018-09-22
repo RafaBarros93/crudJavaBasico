@@ -1,10 +1,16 @@
 
+
+
+
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
+
 
 @Entity
 @Table(name = "cliente")
@@ -20,6 +26,30 @@ public class Cliente {
     private int idade;
     @Column
     private String rg_cliente;
+    @Column
+    private int matricula;
+    @ManyToOne
+    private EnderecoCliente endereco;
+
+    public int getMatricula() {
+        return matricula;
+    }
+
+    public EnderecoCliente getEndereco() {
+        return endereco;
+    }
+
+    public void setEndereco(EnderecoCliente endereco) {
+        this.endereco = endereco;
+    }
+
+    public void setMatricula(int matricula) {
+        this.matricula = matricula;
+    }
+
+    public Cliente() {
+
+    }
 
     public int getID_Cliente() {
         return ID_Cliente;
@@ -71,4 +101,8 @@ public class Cliente {
         this.rg_cliente = rg_cliente;
     }
 
+    @Override
+    public String toString() {
+        return "Cliente{" + "ID_Cliente=" + ID_Cliente + ", nome=" + nome + ", idade=" + idade + ", rg_cliente=" + rg_cliente + '}';
+    }
 }
